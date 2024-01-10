@@ -9,10 +9,6 @@ public class Player {
         Strength = strength;
     }
 
-    public int getId() {
-        return id;
-    }
-
     public String getName() {
         return name;
     }
