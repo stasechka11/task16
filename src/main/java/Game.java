@@ -1,20 +1,17 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
 
 public class Game {
-    List<Player> playersList = new ArrayList<>();
+    HashMap<String, Player> playerHashMap = new HashMap<>();
 
-    public void register(Player player) {
-        playersList.add(player);
+    public void register(String name, Player player) {
+        playerHashMap.put(name, player);
     }
 
     public Player findByName(String name) {
-        for (Player player : playersList) {
-            if (player.getName().equals(name)) {
-                return player;
-            }
-        }
-        return null;
+        if (playerHashMap.containsKey(name)) {
+            return playerHashMap.get(name);
+        } else
+            return null;
     }
 
     public int round(String playerName1, String playerName2) {
