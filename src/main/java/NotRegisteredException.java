@@ -1,5 +1,5 @@
 public class NotRegisteredException extends RuntimeException {
-    public NotRegisteredException(String message) {
-        super(message);
+    public NotRegisteredException(String playerName) {
+        super("Player with name " + playerName + " not registered");
     }
 }
